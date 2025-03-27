@@ -12,8 +12,11 @@ function Contador() {
   const disminuir = () => {
     if (count > 0) {
       setCount(count - 1);
+    } else {
+      alert("No puedes disminuir más, el contador ya está en 0!");
     }
   };
+  
 
   return (
     <div className="container">
