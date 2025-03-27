@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Contador() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (count === 10) {
+      alert("¡Has llegado a 10!");
+    }
+  }, [count]);
 
   const disminuir = () => {
     if (count > 0) {
